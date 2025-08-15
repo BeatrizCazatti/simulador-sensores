@@ -50,7 +50,7 @@ axs[1].grid(axis = 'x', color = 'gray', linestyle = '--', linewidth = 0.7)
 plt.figure(figsize=(7, 5))
 plt.title("Sensor de Movimento")
 
-plt.plot(x, m, 'o', color=None)
+plt.plot(x, m, 'o', color = 'black', linestyle ='')
 plt.grid(axis = 'x', color = 'gray', linestyle = '--', linewidth = 0.7)
 
 plt.show()
