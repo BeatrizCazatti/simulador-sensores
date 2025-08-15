@@ -9,7 +9,7 @@ Cria dados sintéticos de sensores, salva registros gerados, emite alertas e plo
 
 ---
 
-## Prewie dos Gráficos:
+## Prévia dos Gráficos:
   <img src="https://github.com/BeatrizCazatti/simulador-sensores/blob/main/Figure_1.png" width=60%>
   <img src="https://github.com/BeatrizCazatti/simulador-sensores/blob/main/Figure_2.png" width=40%>
 
@@ -17,8 +17,8 @@ Cria dados sintéticos de sensores, salva registros gerados, emite alertas e plo
 ---
 
 ## Funcionalidades
-- **Cria dados sintéticos:** temperatura, movimento, luminosidade; compondo uma base de dados grande e diversa.
-- **Emite Alertas:** apresenta alertas de Condições Extremas via terminal a partir de filtros no Pandas.
+- **Cria dados sintéticos:** categorizados como temperatura, luminosidade e movimento; compondo uma base de dados grande e diversa.
+- **Emite Alertas:** apresenta alertas de Condições Extremas via terminal a partir de filtros com o Pandas.
 - **Armazena Dados:** salva os registros gerados em arquivo `.csv` para posterior visualização.
 - **Plota gráficos:** visualização amigável e clara dos dados gerados.
 
@@ -53,7 +53,7 @@ Cria dados sintéticos de sensores, salva registros gerados, emite alertas e plo
 
 ---
 
-## Autor
+## Autora
 Desenvolvido por **Beatriz Cazatti**.
 
 ---
