@@ -9,7 +9,7 @@ amostra = 20
 hoje = datetime.now().strftime("%H:%M:%S")
 periodo = pd.date_range(start=hoje, periods=amostra, freq='min')
 
-temperatura = np.random.normal(loc=15, scale=15, size=amostra).round(2)
+temperatura = np.random.normal(loc=25, scale=20, size=amostra).round(2)
 luminosidade = np.random.uniform(low=0, high=1000, size=amostra).round(2)
 #0 = sem movimento, 1 = movimento detectado. p=[0.8, 0.2] => 80% das vezes sem movimento, 20% com movimento
 movimento = np.random.choice([0, 1], size=amostra, p=[0.8, 0.2])
@@ -21,8 +21,17 @@ dt = {
 }
 
 data_frame = pd.DataFrame(dt)
-print(data_frame)
 pd.DataFrame(data_frame).to_csv(f'registro_{datetime.now().strftime("%d_%m_%y")}', index=False)
+
+limite_temperatura = 55
+limite_luminosidade = 900
+
+filtro_alertas = (data_frame['temperatura'] > limite_temperatura) | (data_frame['luminosidade'] > limite_luminosidade)
+alertas = data_frame[filtro_alertas]
+
+if not alertas.empty:
+    print(f"[ALERTA] Condições Extremas:")
+    print(alertas)
 
 titulo = {'family': 'serif', 'size': '13', 'color': 'black'}
 label = {'family': 'serif', 'size': '11', 'color': 'gray'}
